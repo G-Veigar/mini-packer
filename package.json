@@ -1,0 +1,26 @@
+{
+  "name": "mini-packer",
+  "version": "1.0.0",
+  "description": "简易版JS打包器",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/G-Veigar/mini-packer.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "ggsxp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/G-Veigar/mini-packer/issues"
+  },
+  "homepage": "https://github.com/G-Veigar/mini-packer#readme",
+  "dependencies": {
+    "@babel/parser": "^7.7.7",
+    "@babel/traverse": "^7.7.4"
+  }
+}
