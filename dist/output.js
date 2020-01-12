@@ -16,7 +16,17 @@
         return currentModule.exports
     }
     // 执行入口文件
-    _require_(/Users/ggxsp/code/repository/mini-packer/example/index.js)
+    _require_('/Users/ggxsp/code/repository/mini-packer/example/index.js')
 })({
-    [{"id":"/Users/ggxsp/code/repository/mini-packer/example/index.js","fileName":"/Users/ggxsp/code/repository/mini-packer/example/index.js","dependencies":["./utils/a.js"],"code":"import a from './utils/a.js'\nlet b = require('./utils/b.js')\n\nconsole.log(a, b)","mapping":{"./utils/a.js":"/Users/ggxsp/code/repository/mini-packer/example/utils/a.js"}},{"id":"/Users/ggxsp/code/repository/mini-packer/example/utils/a.js","fileName":"/Users/ggxsp/code/repository/mini-packer/example/utils/a.js","dependencies":[],"code":"// ES module\nlet a = 'module a'\n\nexport default a","mapping":{}}]
+    '/Users/ggxsp/code/repository/mini-packer/example/index.js':
+            function (_exports_, _require_) { import a from './utils/a.js'
+let b = require('./utils/b.js')
+
+console.log(a, b) },
+        '/Users/ggxsp/code/repository/mini-packer/example/utils/a.js':
+            function (_exports_, _require_) { // ES module
+let a = 'module a'
+
+export default a },
+        
 })

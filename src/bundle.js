@@ -7,12 +7,18 @@ const bootTemplate = fs.readFileSync(bootTemplatePath, 'utf-8')
 
 // 根据依赖图生成boot函数并输出文件
 module.exports = function(modules) {
+    let modStr = ''
+    modules.forEach(mod => {
+        modStr += `'${mod.id}':
+            function (_exports_, _require_) { ${mod.code} },
+        `;
+    })
     // 最终输出的内容
     let output
     // 主入口模块id
     output = bootTemplate.replace('<% entry %>', modules[0].id)
     // 所有打包的模块map
-    output = output.replace('<% modules %>', JSON.stringify(modules)) 
+    output = output.replace('<% modules %>', modStr) 
     // 输出
     const outputPath = path.resolve(__dirname, '../dist/output.js')
     fs.writeFileSync(outputPath, output)
