@@ -16,26 +16,7 @@
         return currentModule.exports
     }
     // 执行入口文件
-    _require_('index.js')
+    _require_('<% entry %>')
 })({
-    'index.js': function(_exports_, _require_) {
-        // import a from './utils/a.js'
-        // let b = require('./utils/b.js')
-        // console.log(a, b)
-
-        let a = _require_('./utils/a.js').default
-        let b = _require_('./utils/b.js').b
-        console.log(a, b)
-    },
-    './utils/a.js': function(_exports_, _require_){
-        // let a = 'module a'
-        // export default a
-
-        let a = 'module a'
-        _exports_.default = a
-    },
-    './utils/b.js': function(_exports_, _require_){
-        // exports.b = 'module b'
-        _exports_.b = 'module b'
-    }
+    <% modules %>
 })
